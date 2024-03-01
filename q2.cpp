@@ -37,8 +37,8 @@ int main(){
 		ans[j+1]=key;
 		co[j+1]=temp;
 	}
-	for(i=0;i<26;i++){
-		for(int j=1;j<26;j++){
+	/*for(i=0;i<26;i++){
+		for(int j=0;j<26;j++){
 			if(ans[i]==ans[j]){
 				if(co[j]>co[i]){
 					char f=co[j];
@@ -47,11 +47,12 @@ int main(){
 				}
 			}
 		}
-	}
+	}*/
 	i=0;
-	while(ans[i]!=0){
-		printf("%c %d\n",co[i],ans[i]);
+	while(ans[i]!=0 && i<26){
+		printf("%c %d",co[i],ans[i]);
 		i++;
+		if(ans[i]!=0 && i<26) printf("\n");
 	}
 	return 0;
 }
